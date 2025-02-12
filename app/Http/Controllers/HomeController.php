@@ -25,6 +25,7 @@ class HomeController
 
         return Inertia::render('Welcome', [
             'data' => $data,
+            'translations' => trans('messages'),
         ]);
     }
 }
