@@ -17,7 +17,6 @@ defineProps({
     },
 });
 
-const albumImage = ref('/album.jpg')
 const currentYear = new Date().getFullYear()
 
 const streamingServices = ref([
@@ -93,8 +92,8 @@ function toggle() {
                 </div>
             </div>
         </div>
-        <div class="wrapper info">
-            <h2 class="text-2xl pt-10">{{ translations.listen }}</h2>
+        <div class="wrapper info mt-2">
+            <h2 class="text-2xl">{{ translations.listen }}</h2>
             <div class="content info" id="contentInfo">
                 <div class="album-panel info" id="albumInfo">
                     <div class="album-img">
@@ -124,7 +123,7 @@ function toggle() {
                 </div>
             </div>
         </div>
-        <div class="wrapper slider mt-10">
+        <div class="wrapper slider mt-2">
             <h2 class="text-2xl">{{ translations.fundraiser }}</h2>
             <div class="content slider">
                 <div v-if="data.length" class="swiper-container" ref="swiperContainer">
@@ -160,7 +159,7 @@ function toggle() {
                 </div>
             </div>
         </div>
-        <div class="wrapper social mt-10">
+        <div class="wrapper social mt-2">
             <div class="content social">
                 <div class="icon-panel">
                     <a href="https://t.me/rominlove" target="_blank" class="icon-link"><i

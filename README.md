@@ -30,3 +30,7 @@ $info = [
         ],
     ];
 ```
+
+vendor/simplehtmldom/simplehtmldom/HtmlDocument.php
+if (false)  // 130line
+

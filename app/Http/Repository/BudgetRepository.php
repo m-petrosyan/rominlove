@@ -2,6 +2,7 @@
 
 namespace App\Http\Repository;
 
+use Illuminate\Support\Facades\Log;
 use simplehtmldom\HtmlWeb;
 
 class BudgetRepository
@@ -25,7 +26,7 @@ class BudgetRepository
                         )->plaintext,
                         $matches
                     ) ? $matches[0] : '';
-                    
+
 
                     $data[$key]['target'] = preg_replace(
                         '/[^\d]/',
@@ -45,6 +46,7 @@ class BudgetRepository
                 }
             }
         } catch (\Exception $e) {
+            Log::error($e->getMessage());
             $data = [];
         }
 
