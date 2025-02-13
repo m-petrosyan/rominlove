@@ -105,7 +105,7 @@ function toggle() {
                     </div>
                 </div>
                 <div class="album-panel links" id="albumLinks">
-                    <div class="icon-panel services">
+                    <div class="icon-panel services gap-y-2">
                         <a v-for="service in streamingServices"
                            :key="service.name"
                            :href="service.link"
