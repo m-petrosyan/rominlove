@@ -17,16 +17,15 @@ class BudgetRepository
                 if ($html) {
                     $data[$key]['active'] = $item['active'];
 
-//                    $data[$key]['collected'] = preg_match(
-//                        '/\d+/',
-//                        $html->find(
-//                            '.TargetItemMoney_root_Rlgve span.TargetItemCommon_collectedTextTarget_McKGZ',
-//                            0
-//                        )->plaintext,
-//                        $matches
-//                    ) ? $matches[0] : '';
-
-                    $data[$key]['collected'] = 100;
+                    $data[$key]['collected'] = preg_match(
+                        '/\d+/',
+                        $html->find(
+                            '.TargetItemMoney_root_Rlgve span.TargetItemCommon_collectedTextTarget_McKGZ',
+                            0
+                        )->plaintext,
+                        $matches
+                    ) ? $matches[0] : '';
+                    
 
                     $data[$key]['target'] = preg_replace(
                         '/[^\d]/',
