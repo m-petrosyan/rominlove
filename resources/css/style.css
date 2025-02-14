@@ -491,15 +491,15 @@ body::before {
     margin-bottom: 15px;
 }
 
+.goal-text .goal-btn {
+    font-size: 22px;
+}
+
 @media screen and (max-width: 650px) {
     .goal-text a {
         font-size: 18px;
         line-height: 24px;
         margin-bottom: 10px;
-    }
-
-    .goal-text .goal-btn {
-        font-size: 22px;
     }
 }
 
