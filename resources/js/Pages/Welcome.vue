@@ -87,7 +87,8 @@ function toggle() {
                     <div class="typing"><a>{{ translations.subtitle }}</a></div>
                 </div>
                 <div class="header-buttons">
-                    <div class="header-btn uppercase">{{ locale }}</div>
+                    <a :href="locale === 'en' ? 'https://rominlove.com' : 'https://rominlove.ru'"
+                       class="header-btn uppercase">{{ locale }}</a>
                 </div>
             </div>
         </div>
