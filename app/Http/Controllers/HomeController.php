@@ -21,6 +21,7 @@ class HomeController
             [
                 'active' => true,
                 'url' => 'https://boosty.to/rominlove',
+                'donate' => 'https://boosty.to/rominlove/single-payment/donation/676886/target?share=target_link',
                 'description' => [
                     'ru' => 'Цель - снять музыкальный видеоклип "Hold Me Tight" в Армении. Ваша поддержка будет вознаграждена вашим Boosty Name в титрах видео.',
                     'en' => 'The goal - to shoot a music video clip "Hold Me Tight" in Armenia. Your support will be rewarded with your Boosty Name in the credits of the video.',

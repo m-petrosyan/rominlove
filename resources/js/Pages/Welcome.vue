@@ -149,7 +149,7 @@ function toggle() {
                                     <div class="goal-btn" v-if="!item.active ">
                                         {{ translations.donation_is_over }}
                                     </div>
-                                    <a v-else class="goal-btn" target="_blank" :href="item.url">
+                                    <a v-else class="goal-btn" target="_blank" :href="item.donate">
                                         {{ translations.donate }}
                                     </a>
                                 </div>
