@@ -183,7 +183,7 @@ function toggle() {
                 </div>
             </div>
         </div>
-        <div class="wrapper footer mt-10">
+        <div class="wrapper footer mt-6">
             <div class="content footer">
                 <a>ROMINLOVE © {{ currentYear }}</a>
             </div>
