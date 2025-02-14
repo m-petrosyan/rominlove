@@ -1,15 +1,16 @@
 <?php
 
 return [
-    'subtitle' => 'music beyond limits and boundaries.',
-    'listen' => 'Listen on streaming',
+    'subtitle' => 'музыка вне границ и ограничений.',
+    'listen' => 'Слушать на стриминге',
     'hold' => 'Hold me tight',
-    'latest' => 'SINGLE',
-    'fundraiser' => 'Fundraiser',
-    'active_fundraising' => 'Active',
-    'archive_fundraising' => 'Finished',
-    'donate' => 'Donate',
-    'donation_is_over' => 'Donation is over',
-    'money_raised' => 'money raised',
-    'all' => 'All',
+    'latest' => 'СИНГЛ',
+    'fundraiser' => 'Сбор средств',
+    'active_fundraising' => 'Идет сбор',
+    'archive_fundraising' => 'Сбор завершен',
+    'donate' => 'Поддержать',
+    'donation_is_over' => 'Еще поддержать',
+    'money_raised' => 'собрано',
+    'all' => 'Все',
+    'of' => 'из',
 ];

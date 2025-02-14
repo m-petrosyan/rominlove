@@ -12,4 +12,5 @@ return [
     'donation_is_over' => 'Donation is over',
     'money_raised' => 'money raised',
     'all' => 'All',
+    'of' => 'of',
 ];

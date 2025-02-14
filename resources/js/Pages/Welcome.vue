@@ -15,28 +15,15 @@ defineProps({
     translations: {
         type: Object,
     },
+    streemings: {
+        type: Array,
+    },
+    socialLinks: {
+        type: Array,
+    },
 });
 
 const currentYear = new Date().getFullYear()
-
-const streamingServices = ref([
-    {name: 'Spotify', icon: '/spotify.svg', link: 'https://open.spotify.com/album/1fyWAF0i2pf0pDPF32Hctd'},
-    {name: 'Apple', icon: '/apple.svg', link: 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'},
-    {name: 'iTunes', icon: '/itunes.svg', link: 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'},
-    {name: 'Amazon', icon: '/amazon.svg', link: 'https://music.amazon.com/albums/B0DVR3Q7J9?trackAsin=B0DVR5MP9P'},
-    // {name: 'Tidal', icon: '/tidal.svg', link: '#'},
-    // {name: 'Deezer', icon: '/deezer.svg', link: '#'},
-    {name: 'Youtube', icon: '/youtube.svg', link: 'https://www.youtube.com/watch?v=_BmVIX2gl3c'},
-    {name: 'Tiktok', icon: '/tiktok.svg', link: 'https://www.tiktok.com/tag/rominlove'},
-    // {name: 'Yandex', icon: '/yandex.svg', link: '#'},
-])
-
-const socialLinks = ref([
-    {name: 'telegram', icon: 'fa-brands fa-telegram', url: 'https://telegram.org'},
-    {name: 'instagram', icon: 'fa-brands fa-instagram', url: 'https://instagram.com'},
-    {name: 'twitter', icon: 'fa-brands fa-twitter', url: 'https://twitter.com'},
-    {name: 'youtube', icon: 'fa-brands fa-youtube', url: 'https://youtube.com'}
-])
 
 const swiperContainer = ref(null);
 let swiperInstance = null;
@@ -78,7 +65,6 @@ function toggle() {
 </script>
 
 <template>
-
     <div class="container">
         <div class="wrapper">
             <div class="content header">
@@ -106,12 +92,12 @@ function toggle() {
                 </div>
                 <div class="album-panel links" id="albumLinks">
                     <div class="icon-panel services gap-y-2">
-                        <a v-for="service in streamingServices"
+                        <a v-for="service in streemings"
                            :key="service.name"
                            :href="service.link"
                            target="_blank"
                            class="icon-link">
-                            <img class="icon" :src="service.icon" :alt="service.name">
+                            <img class="icon" :src="'/'+service.name.toLowerCase()+'.svg'" :alt="service.name">
                             <span>{{ service.name }}</span>
                         </a>
                     </div>
@@ -143,7 +129,9 @@ function toggle() {
                                         }}
                                     </span>
                                 </div>
-                                <h2>{{ item.collected }} of {{ item.target }}{{ locale === 'en' ? '$' : '₽' }}
+                                <h2>{{ item.collected }} {{ translations.of }} {{
+                                        item.target
+                                    }}{{ locale === 'en' ? '$' : '₽' }}
                                     {{ translations.money_raised }}</h2>
                                 <a>{{ item.description[locale] }}</a>
                                 <div class="goal-buttons">
@@ -169,18 +157,9 @@ function toggle() {
         <div class="wrapper social mt-2">
             <div class="content social">
                 <div class="icon-panel">
-                    <a href="https://t.me/rominlove" target="_blank" class="icon-link"><i
-                        class="fa-brands fa-telegram"></i></a>
-                    <a href="https://www.instagram.com/rominlovemusic" target="_blank" class="icon-link"><i
-                        class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/groups/rominlove" target="_blank" class="icon-link"><i
-                        class="fa-brands fa-facebook"></i></a>
-                    <a href="https://x.com/rominlovemusic" target="_blank" class="icon-link"><i
-                        class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.youtube.com/@rominlove" target="_blank" class="icon-link"><i
-                        class="fa-brands fa-youtube"></i></a>
-                    <a href="https://www.tiktok.com/@rominlovemusic" target="_blank" class="icon-link"><i
-                        class="fa-brands fa-tiktok"></i></a>
+                    <a v-for="item in socialLinks" :key="item.icon" :href="item.url" target="_blank"
+                       class="icon-link"><i
+                        :class="['fa-brands', 'fa-'+item.icon.toLowerCase()]"></i></a>
                 </div>
             </div>
         </div>

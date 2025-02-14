@@ -37,11 +37,33 @@ class HomeController
 //            ],
         ];
 
+        $streemings = [
+            ['name' => 'Spotify', 'link' => 'https://open.spotify.com/album/1fyWAF0i2pf0pDPF32Hctd'],
+            ['name' => 'Apple', 'link' => 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'],
+            ['name' => 'iTunes', 'link' => 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'],
+            ['name' => 'Amazon', 'link' => 'https://music.amazon.com/albums/B0DVR3Q7J9?trackAsin=B0DVR5MP9P'],
+            ['name' => 'Youtube', 'link' => 'https://www.youtube.com/watch?v=_BmVIX2gl3c'],
+            ['name' => 'Tiktok', 'link' => 'https://www.tiktok.com/tag/rominlove'],
+        ];
+
+        $socialLinks = [
+            ['icon' => 'telegram', 'url' => 'https://telegram.org'],
+            ['icon' => 'instagram', 'url' => 'https://instagram.com'],
+            ['icon' => 'facebook', 'url' => 'https://www.facebook.com/groups/rominlove'],
+            ['icon' => ' fa-x-twitter', 'url' => 'https://x.com/rominlovemusic'],
+            ['icon' => 'youtube', 'url' => 'https://youtube.com'],
+
+            ['icon' => 'tiktok', 'url' => 'https://www.tiktok.com/@rominlovemusic'],
+
+        ];
+
         $data = $this->budgetService->get($info);
 
         return Inertia::render('Welcome', [
             'data' => $data,
             'translations' => trans('messages'),
+            'streemings' => $streemings,
+            'socialLinks' => $socialLinks,
         ]);
     }
 }
