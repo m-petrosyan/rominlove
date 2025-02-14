@@ -40,8 +40,8 @@ class BudgetService
                     );
 
                     if (Session::get('locale') === 'en') {
-                        $data[$key]['collected'] = floor($data[$key]['collected'] / $this->getRubExchangeRate('USD'));
-                        $data[$key]['target'] = floor($data[$key]['target'] / $this->getRubExchangeRate('USD'));
+                        $data[$key]['collected'] = (int)($data[$key]['collected'] / $this->getRubExchangeRate('USD'));
+                        $data[$key]['target'] = (int)($data[$key]['target'] / $this->getRubExchangeRate('USD'));
                     }
                 } else {
                     throw new \Exception('Failed to load HTML');
