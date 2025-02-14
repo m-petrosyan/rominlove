@@ -142,7 +142,7 @@ function toggle() {
                                         }}
                                     </span>
                                 </div>
-                                <h2>{{ item.collected }} of {{ item.target + locale === 'en' ? '$' : '₽' }}
+                                <h2>{{ item.collected }} of {{ item.target + '' + locale === 'en' ? '$' : '₽' }}
                                     {{ translations.money_raised }}</h2>
                                 <a>{{ item.description[locale] }}</a>
                                 <div class="goal-buttons">
