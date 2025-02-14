@@ -10,4 +10,6 @@ return [
     'archive_fundraising' => 'Finished',
     'donate' => 'Donate',
     'donation_is_over' => 'Donation is over',
+    'money_raised' => 'money raised',
+    'all' => 'All',
 ];

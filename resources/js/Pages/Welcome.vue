@@ -118,7 +118,7 @@ function toggle() {
                 <div class="album-panel all" id="albumAll">
                     <div class="icon-panel services">
                         <button @click="toggle" class="icon-link" id="toggleButton"><i
-                            class="fa-solid fa-chevron-right"></i><span>All</span></button>
+                            class="fa-solid fa-chevron-right"></i><span>{{ translations.all }}</span></button>
                     </div>
                 </div>
             </div>
@@ -142,7 +142,7 @@ function toggle() {
                                         }}
                                     </span>
                                 </div>
-                                <h2>{{ item.collected }} of {{ item.target }}$ money raised</h2>
+                                <h2>{{ item.collected }} of {{ item.target }}$ {{ translations.money_raised }}</h2>
                                 <a>{{ item.description[locale] }}</a>
                                 <div class="goal-buttons">
                                     <div class="goal-btn" v-if="!item.active ">
