@@ -492,7 +492,7 @@ body::before {
 }
 
 .goal-text .goal-btn {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 @media screen and (max-width: 650px) {
