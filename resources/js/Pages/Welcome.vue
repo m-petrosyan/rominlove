@@ -20,17 +20,16 @@ defineProps({
 const currentYear = new Date().getFullYear()
 
 const streamingServices = ref([
-    {name: 'Spotify', icon: '/spotify.svg', link: '#'},
-    {name: 'Apple', icon: '/apple.svg', link: '#'},
-    {name: 'Itupes', icon: '/itunes.svg', link: '#'},
-    {name: 'Amazon', icon: '/amazon.svg', link: '#'},
-    {name: 'Tidal', icon: '/tidal.svg', link: '#'},
-    {name: 'Deezer', icon: '/deezer.svg', link: '#'},
-    {name: 'Youtube', icon: '/youtube.svg', link: '#'},
-    {name: 'Tiktok', icon: '/tiktok.svg', link: '#'},
-    {name: 'Yandex', icon: '/yandex.svg', link: '#'},
+    {name: 'Spotify', icon: '/spotify.svg', link: 'https://open.spotify.com/album/1fyWAF0i2pf0pDPF32Hctd'},
+    {name: 'Apple', icon: '/apple.svg', link: 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'},
+    {name: 'Itunes', icon: '/itunes.svg', link: 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'},
+    {name: 'Amazon', icon: '/amazon.svg', link: 'https://music.amazon.com/albums/B0DVR3Q7J9?trackAsin=B0DVR5MP9P'},
+    // {name: 'Tidal', icon: '/tidal.svg', link: '#'},
+    // {name: 'Deezer', icon: '/deezer.svg', link: '#'},
+    {name: 'Youtube', icon: '/youtube.svg', link: 'https://www.youtube.com/watch?v=_BmVIX2gl3c'},
+    {name: 'Tiktok', icon: '/tiktok.svg', link: 'https://www.tiktok.com/tag/rominlove'},
+    // {name: 'Yandex', icon: '/yandex.svg', link: '#'},
 ])
-
 
 const socialLinks = ref([
     {name: 'telegram', icon: 'fa-brands fa-telegram', url: 'https://telegram.org'},
@@ -109,6 +108,7 @@ function toggle() {
                         <a v-for="service in streamingServices"
                            :key="service.name"
                            :href="service.link"
+                           target="_blank"
                            class="icon-link">
                             <img class="icon" :src="service.icon" :alt="service.name">
                             <span>{{ service.name }}</span>
@@ -149,7 +149,7 @@ function toggle() {
                                     <div class="goal-btn" v-if="!item.active ">
                                         {{ translations.donation_is_over }}
                                     </div>
-                                    <a v-else class="goal-btn" :href="item.url">
+                                    <a v-else class="goal-btn" target="_blank" :href="item.url">
                                         {{ translations.donate }}
                                     </a>
                                 </div>

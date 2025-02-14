@@ -26,14 +26,14 @@ class HomeController
                     'en' => 'The goal - to shoot a music video clip "Hold Me Tight" in Armenia. Your support will be rewarded with your Boosty Name in the credits of the video.',
                 ],
             ],
-            [
-                'active' => false,
-                'url' => 'https://boosty.to/stavrowitch',
-                'description' => [
-                    'ru' => 'Пример текста',
-                    'en' => 'Text example',
-                ],
-            ],
+//            [
+//                'active' => false,
+//                'url' => 'https://boosty.to/stavrowitch',
+//                'description' => [
+//                    'ru' => 'Пример текста',
+//                    'en' => 'Text example',
+//                ],
+//            ],
         ];
 
         $data = $this->budgetService->get($info);
