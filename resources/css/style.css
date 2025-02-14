@@ -493,9 +493,13 @@ body::before {
 
 @media screen and (max-width: 650px) {
     .goal-text a {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 24px;
         margin-bottom: 10px;
+    }
+
+    .goal-text .goal-buttons {
+        font-size: 22px;
     }
 }
 
