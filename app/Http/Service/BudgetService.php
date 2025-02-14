@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Repository;
+namespace App\Http\Service;
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session;
 use simplehtmldom\HtmlWeb;
 
-class BudgetRepository
+class BudgetService
 {
-    public static function get(array $url): array
+    public function get(array $url): array
     {
         try {
             $client = new HtmlWeb();
@@ -16,7 +18,7 @@ class BudgetRepository
             foreach ($url as $key => $item) {
                 $html = $client->load($item['url']);
                 if ($html) {
-                    $data[$key]['active'] = $item['active'];
+                    $data[$key] = $item;
 
                     $data[$key]['collected'] = preg_match(
                         '/\d+/',
@@ -37,10 +39,10 @@ class BudgetRepository
                         )->plaintext
                     );
 
-                    $data[$key]['description'] = $html->find(
-                        '.TargetItemMoney_root_Rlgve div.TargetItemCommon_description_j7lxX',
-                        0
-                    )->plaintext;
+                    if (Session::get('locale') === 'en') {
+                        $data[$key]['collected'] = $data[$key]['collected'] / $this->getRubExchangeRate('USD');
+                        $data[$key]['target'] = $data[$key]['target'] / $this->getRubExchangeRate('USD');
+                    }
                 } else {
                     throw new \Exception('Failed to load HTML');
                 }
@@ -56,5 +58,19 @@ class BudgetRepository
         });
 
         return $data;
+    }
+
+
+    function getRubExchangeRate($currency = 'USD')
+    {
+        $response = Http::get('https://www.cbr-xml-daily.ru/daily_json.js');
+
+        if ($response->successful()) {
+            $data = $response->json();
+
+            return $data['Valute'][$currency]['Value'] ?? null;
+        }
+
+        return null;
     }
 }

@@ -143,9 +143,14 @@ function toggle() {
                                     </span>
                                 </div>
                                 <h2>{{ item.collected }} of {{ item.target }}$ money raised</h2>
-                                <a>{{ item.description }}</a>
+                                <a>{{ item.description[locale] }}</a>
                                 <div class="goal-buttons">
-                                    <div class="goal-btn">{{ item.active ? 'Donate' : 'Donation is over' }}</div>
+                                    <div class="goal-btn" v-if="!item.active ">
+                                        {{ translations.donation_is_over }}
+                                    </div>
+                                    <a v-else class="goal-btn" :href="item.url">
+                                        {{ translations.donate }}
+                                    </a>
                                 </div>
                             </div>
                         </div>

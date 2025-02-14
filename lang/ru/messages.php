@@ -8,4 +8,6 @@ return [
     'fundraiser' => 'Fundraiser',
     'active_fundraising' => 'Active',
     'archive_fundraising' => 'Finished',
+    'donate' => 'Donate',
+    'donation_is_over' => 'Donation is over',
 ];
