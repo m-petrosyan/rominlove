@@ -22,7 +22,7 @@ const currentYear = new Date().getFullYear()
 const streamingServices = ref([
     {name: 'Spotify', icon: '/spotify.svg', link: 'https://open.spotify.com/album/1fyWAF0i2pf0pDPF32Hctd'},
     {name: 'Apple', icon: '/apple.svg', link: 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'},
-    {name: 'Itunes', icon: '/itunes.svg', link: 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'},
+    {name: 'iTunes', icon: '/itunes.svg', link: 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'},
     {name: 'Amazon', icon: '/amazon.svg', link: 'https://music.amazon.com/albums/B0DVR3Q7J9?trackAsin=B0DVR5MP9P'},
     // {name: 'Tidal', icon: '/tidal.svg', link: '#'},
     // {name: 'Deezer', icon: '/deezer.svg', link: '#'},
@@ -142,7 +142,7 @@ function toggle() {
                                         }}
                                     </span>
                                 </div>
-                                <h2>{{ item.collected }} of {{ item.target }} {{ locale === 'en' ? '$' : '₽' }}
+                                <h2>{{ item.collected }} of {{ item.target + locale === 'en' ? '$' : '₽' }}
                                     {{ translations.money_raised }}</h2>
                                 <a>{{ item.description[locale] }}</a>
                                 <div class="goal-buttons">
