@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROMINLOVE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/s.css">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="content header">
+                <div class="logo">
+                    <div class="title"><h1>ROMINLOVE</h1></div>
+                    <div class="typing"><a>music beyond limits and boundaries.</a></div>
+                </div>
+                <div class="header-buttons">
+                    <div class="header-btn">EN</div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper info">
+            <h2>Listen on streaming</h2>
+            <div class="content info" id="contentInfo">
+                <div class="album-panel info" id="albumInfo">
+                    <div class="album-img">
+                        <img src="images/album.jpg" alt="Album image">
+                    </div>
+                    <div class="album-info">
+                        <h1>Hold me tight</h1>
+                        <a>SINGLE</a>
+                    </div>
+                </div>
+                <div class="album-panel links" id="albumLinks">
+                    <div class="icon-panel services">
+                        <a href="javascript:delay('https://open.spotify.com/album/1fyWAF0i2pf0pDPF32Hctd')" class="icon-link services"><img class="icon" src="./svg/spotify.svg"><span>Spotify</span></a>
+                        <a href="javascript:delay('https://music.apple.com/am/album/hold-me-tight-single/1793972434')" class="icon-link services"><img class="icon" src="./svg/apple.svg"><span>Apple</span></a>
+                        <a href="javascript:delay('https://music.apple.com/am/album/hold-me-tight-single/1793972434')" class="icon-link services"><img class="icon" src="./svg/itunes.svg"><span>ITunes</span></a>
+                        <a href="javascript:delay('https://music.amazon.com/albums/B0DVR3Q7J9?trackAsin=B0DVR5MP9P')" class="icon-link services"><img class="icon" src="./svg/amazon.svg"><span>Amazon</span></a>
+
+                        <a href="javascript:delay('https://www.youtube.com/watch?v=_BmVIX2gl3c')" class="icon-link services"><img class="icon" src="./svg/youtube.svg"><span>YouTube</span></a>
+                        <a href="javascript:delay('https://www.tiktok.com/tag/rominlove')" class="icon-link services"><img class="icon" src="./svg/tiktok.svg"><span>TikTok</span></a>
+
+                    </div>
+                </div>
+                <div class="album-panel all" id="albumAll">
+                    <div class="icon-panel services">
+                        <a class="icon-link" id="toggleButton"><i class="fa-solid fa-chevron-right"></i><span>All</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper slider">
+            <h2>Fundraiser</h2>
+            <div class="content slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="goal-text">
+                                <div class="goal-bar"><div class="goal-progress" style="width: 50%"></div><span>Active</span></div>
+                                <h2>3 of 575$ money raised</h2>
+                                <a>The goal - to shoot a music video clip "Hold Me Tight" in Armenia. Your support will be rewarded with your Boosty Name in the credits of the video.</a>
+                                <div onclick="window.open('https://boosty.to/rominlove/single-payment/donation/676886/target?share=target_link', '_blank');" class="goal-buttons"><div class="goal-btn">Donate</div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper social">
+            <div class="content social">
+                <div class="icon-panel">
+                    <a href="https://t.me/rominlove" target="_blank" class="icon-link"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://www.instagram.com/rominlovemusic" target="_blank" class="icon-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/groups/rominlove" target="_blank" class="icon-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/rominlovemusic" target="_blank" class="icon-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/@rominlove" target="_blank" class="icon-link"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.tiktok.com/@rominlovemusic" target="_blank" class="icon-link"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper footer">
+            <div class="content footer">
+                <a>ROMINLOVE © 2025. Contact: Artur Chubarov (rominlove87@gmail.com)</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1.15,
+        spaceBetween: 10,
+        centeredSlides: true,
+        mousewheel: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    </script>
+    <script>
+    function delay(URL) {
+        setTimeout(() => window.open(URL, '_blank'), 450);
+    }
+    </script>
+    <script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+        const albumInfo = document.getElementById('albumInfo');
+        const albumLinks = document.getElementById('albumLinks');
+        const contentInfo = document.getElementById('contentInfo');
+        const toggleIcon = document.querySelector('#toggleButton i');
+
+        albumInfo.classList.toggle('hidden');
+        albumLinks.classList.toggle('expanded');
+        contentInfo.classList.toggle('expanded-height');
+        toggleIcon.classList.toggle('fa-chevron-right');
+        toggleIcon.classList.toggle('fa-chevron-left');
+    });
+    </script>
+</body>
+</html>

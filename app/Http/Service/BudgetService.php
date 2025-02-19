@@ -20,14 +20,15 @@ class BudgetService
                 if ($html) {
                     $data[$key] = $item;
 
-                    $data[$key]['collected'] = preg_match(
-                        '/\d+/',
-                        $html->find(
-                            '.TargetItemMoney_root_Rlgve span.TargetItemCommon_collectedTextTarget_McKGZ',
-                            0
-                        )->plaintext,
-                        $matches
-                    ) ? $matches[0] : '';
+
+                   $data[$key]['collected'] = preg_replace(
+                       '/[^\d]/',
+                       '',
+                       $html->find(
+                           '.TargetItemMoney_root_Rlgve span.TargetItemCommon_collectedTextTarget_McKGZ',
+                           0
+                       )->plaintext
+                   );
 
 
                     $data[$key]['target'] = preg_replace(

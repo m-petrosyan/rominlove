@@ -2,15 +2,16 @@
 
 return [
     'subtitle' => 'музыка вне границ и ограничений.',
-    'listen' => 'Слушать на стриминге',
+    'listen' => 'Текущий релиз',
     'hold' => 'Hold me tight',
     'latest' => 'СИНГЛ',
-    'fundraiser' => 'Сбор средств',
-    'active_fundraising' => 'Идет сбор',
+    'fundraiser' => 'Новые цели',
+    'active_fundraising' => 'Идет сбор средств',
     'archive_fundraising' => 'Сбор завершен',
     'donate' => 'Поддержать',
-    'donation_is_over' => 'Еще поддержать',
+    'donation_is_over' => 'Поддержать еще',
     'money_raised' => 'собрано',
     'all' => 'Все',
     'of' => 'из',
+    'copyright' => 'ROMINLOVE © 2025. Info: rominlovemusic@gmail.com',
 ];
