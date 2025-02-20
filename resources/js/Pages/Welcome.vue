@@ -3,7 +3,6 @@ import {onMounted, onUnmounted, ref} from 'vue'
 import Swiper from 'swiper'
 import 'swiper/css'
 import {Navigation} from 'swiper/modules'
-// import 'swiper/css/navigation'
 
 defineProps({
     data: {
@@ -22,8 +21,6 @@ defineProps({
         type: Array,
     },
 });
-
-const currentYear = new Date().getFullYear()
 
 const swiperContainer = ref(null);
 let swiperInstance = null;
@@ -124,9 +121,7 @@ function toggle() {
                                          :style="{ width: `${(item.collected / item.target) * 100}%` }">
                                     </div>
                                     <span>
-                                        {{
-                                            item.active ? translations.active_fundraising : translations.archive_fundraising
-                                        }}
+                                        {{ item.active ? translations.active_fundraising : translations.archive_fundraising }}
                                     </span>
                                 </div>
                                 <h2>{{ item.collected }} {{ translations.of }} {{
