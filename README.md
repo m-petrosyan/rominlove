@@ -31,6 +31,7 @@ app/Http/Controllers/HomeController.php
 ```
 
 ## Ссылки на стриминги и соц сети
+
 ```
   $streemings = [
             ['name' => 'Spotify', 'link' => 'https://open.spotify.com/album/1fyWAF0i2pf0pDPF32Hctd'],
@@ -52,8 +53,14 @@ app/Http/Controllers/HomeController.php
         ];
 ```
 
+> > > Мета тэги тут
+
+```
+resources/views/app.blade.php
+```
 
 ## это для меня
+
 ```
 vendor/simplehtmldom/simplehtmldom/HtmlDocument.php
 if (false)  // 130line
