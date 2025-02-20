@@ -19,6 +19,7 @@
         "vue": "^3.4.0"
     },
     "dependencies": {
-        "swiper": "^11.2.2"
+        "swiper": "^11.2.2",
+        "vue-meta": "^3.0.0-alpha.2"
     }
 }

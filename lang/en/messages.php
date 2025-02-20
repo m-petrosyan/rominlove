@@ -1,16 +1,17 @@
 <?php
 
 return [
-    'subtitle' => 'music beyond limits and boundaries.',
-    'listen' => 'Listen on streaming',
+    'subtitle' => 'music beyond limits & boundaries 🤍',
+    'listen' => 'Current release',
     'hold' => 'Hold me tight',
     'latest' => 'SINGLE',
-    'fundraiser' => 'Fundraiser',
-    'active_fundraising' => 'Active',
-    'archive_fundraising' => 'Finished',
+    'fundraiser' => 'New goals',
+    'active_fundraising' => 'Active fundraising',
+    'archive_fundraising' => 'Finished fundraising',
     'donate' => 'Donate',
     'donation_is_over' => 'Donation is over',
     'money_raised' => 'money raised',
     'all' => 'All',
     'of' => 'of',
+    'copyright' => 'ROMINLOVE © 2025. Info: rominlovemusic@gmail.com',
 ];
