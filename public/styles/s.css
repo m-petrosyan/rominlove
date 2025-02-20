@@ -339,7 +339,11 @@ body::before {
 }
 
 .album-panel.links {
+<<<<<<< HEAD
     flex: 0 1 195px;
+=======
+    flex: 0 1 185px;
+>>>>>>> 2e4b9f3ec7de6eb6c80360f94b7ad173edd47e01
     overflow: hidden;
     margin-right: 0;
     transition: margin 0.5s ease, flex 0.5s ease;
