@@ -41,10 +41,9 @@ class HomeController
             ['name' => 'Spotify', 'link' => 'https://open.spotify.com/album/1fyWAF0i2pf0pDPF32Hctd'],
             ['name' => 'Apple', 'link' => 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'],
             ['name' => 'YouTube', 'link' => 'https://www.youtube.com/watch?v=_BmVIX2gl3c'],
-            ['name' => 'iTunes', 'link' => 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'],
             ['name' => 'Amazon', 'link' => 'https://music.amazon.com/albums/B0DVR3Q7J9?trackAsin=B0DVR5MP9P'],
             ['name' => 'Deezer', 'link' => 'https://www.deezer.com/en/album/706795761'],
-            ['name' => 'YouTube', 'link' => 'https://www.youtube.com/watch?v=_BmVIX2gl3c'],
+            ['name' => 'iTunes', 'link' => 'https://music.apple.com/am/album/hold-me-tight-single/1793972434'],
             ['name' => 'Tiktok', 'link' => 'https://www.tiktok.com/tag/rominlove'],
             ['name' => 'Yandex', 'link' => 'https://music.yandex.ru/album/35511343'],
         ];
